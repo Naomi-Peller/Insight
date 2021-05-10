@@ -1,0 +1,147 @@
+:root {
+  --dark-color: hsl(233, 47%, 7%);
+  --primary-color: hsl(244, 38%, 16%);
+  --secondary-color: rgb(236, 85, 236);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  line-height: 1.4;
+  color: white;
+  font-weight: 400;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.showcase {
+  padding: 100px;
+  max-width: 1200px;
+}
+
+.showcase-form .text-secondary {
+  margin: 0 5px;
+}
+
+.showcase-form {
+  padding: 50px;
+  max-width: 500px;
+  margin: auto 0;
+}
+
+.showcase-form h1 {
+  font-size: 25px;
+  color: hsl(0, 0%, 100%);
+}
+
+.showcase-form p {
+  font-size: 13px;
+  letter-spacing: 1px;
+  line-height: 20px;
+  color: hsla(0, 0%, 100%, 0.75);
+}
+
+.showcase-form .ronin p {
+  font-size: 13px;
+}
+
+.showcase-form .grid {
+  padding-top: 20px;
+  max-width: 500px;
+  margin: auto 0;
+}
+.caption {
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(129, 86, 156);
+  height: 350px;
+  width: 100%;
+  /* opacity: 0.6; */
+}
+
+.naomi {
+  background-image: url(/image-header-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  mix-blend-mode: soft-light;
+}
+
+.ronin {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.ronin div {
+  margin-right: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/*mobile*/
+@media only screen and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+    /* grid-template-rows: repeat(2, 1fr); */
+  }
+
+  .showcase {
+    padding: 70px 20px;
+  }
+
+  .showcase-form {
+    padding: 20px;
+  }
+
+  .showcase-form h1,
+  .showcase-form p {
+    text-align: center;
+  }
+
+  .showcase-form p {
+    line-height: 20px;
+  }
+
+  .showcase-form h1 {
+    line-height: 30px;
+    margin-top: 15px;
+    font-size: 25px;
+  }
+
+  .caption {
+    grid-row: 1/2;
+
+    height: 200px;
+  }
+
+  .naomi {
+    background-image: url(/image-header-mobile.jpg);
+  }
+
+  .ronin {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ronin div {
+    margin-bottom: 25px;
+    align-self: center;
+    text-align: center;
+  }
+}
